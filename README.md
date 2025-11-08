@@ -23,21 +23,21 @@ cmake --build . -j
 
 `otus` 
 
-[otus_default](screenshots/otus_default)
+![otus_default](screenshots/otus_default)
 
 `otus -cpu` 
 
-[ss for cpu](screenshots/otus_cpu)
+![ss for cpu](screenshots/otus_cpu)
 
 `otus -mem` 
 
-[ss for mem](screenshots/otus_mem)
+![ss for mem](screenshots/otus_mem)
 
 `otus -proc` 
 
-[ss for proc](screenshots/otus_proc) 
+![ss for proc](screenshots/otus_proc) 
 
 `otus -proc -lim N(default 40)` 
 
-[ss for proc lim](screenshots/otus_lim) 
+![ss for proc lim](screenshots/otus_lim) 
 
