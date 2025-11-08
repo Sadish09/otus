@@ -1,0 +1,37 @@
+# Build dirs
+/build/
+/build-*/
+build/
+cmake-build-*/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+install_manifest.txt
+CTestTestfile.cmake
+cmake_install.cmake
+
+# Binaries
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.dylib
+*.exe
+otus
+otus.exe
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+*.core
+
+# System crap
+.DS_Store
+Thumbs.db
