@@ -126,7 +126,7 @@ ftxui::Element gauge_labeled(const string& label, double ratio, const string& ri
     );
 }
 
-// ── process tree ─
+//process tree
 std::vector<int> build_roots(const std::vector<otus::Proc>& ps) {
     std::set<int> have;
     for (auto& p : ps) have.insert(p.pid);
@@ -266,7 +266,7 @@ int main(int argc, char** argv) {
         std::cout << "\033[?25h\033[2J\033[H"; return 0;
     }
 
-    // ── dashboard 
+    //dashboard
     while (g_run) {
         double c = cpu.sample();
         auto m = mem.sample();
@@ -295,13 +295,19 @@ int main(int argc, char** argv) {
                 separator(),
                 hbox({
                     text("GPU  ") | dim,
-                    text(g.count ? (g.vendor + " ×" + std::to_string(g.count)) : "N/A"),
+                    text(g.count
+                        ? (g.vendor + " ×" + std::to_string(g.count))
+                        : "N/A"),
                     filler(),
-                    text(gpu_right) | dim,
+                    text(g.count
+                    ? (std::to_string((int)g.utilPct) + "%"
+                        + (g.memTotalMiB > 0
+                    ? "  " + fmt1(g.memUsedMiB/1024.0) + "/" + fmt1(g.memTotalMiB/1024.0) + "G"
+                    : ""))
+                    : "no supported GPU detected") | dim,
                 }),
             })
         ) | border;
-
         auto plist = procs.sample(opt.intervalSec);
         auto roots = build_roots(plist);
         auto ch    = build_children(plist);
