@@ -2,10 +2,13 @@
 
 Lightweight system monitor built with **FTXUI**. Shows CPU/GPU/MEM/DISK, plus a grouped, hierarchical process view.
 
-Please note GPU support is limited for nvidia GPUs.
 
-
-## Clone & Build 
+# Installation 
+## Using script 
+```shell
+bash install.sh
+``` 
+## Manual Installation
 1.Clone 
 ```bash
 git clone https://github.com/Sadish09/otus
@@ -16,7 +19,7 @@ cd otus
 mkdir build && cd build 
 cmake .. -DCMAKE_BUILD_TYPE=Release
 cmake --build . -j 
-./otus #opens the default dashboard 
+./otus 
 ```
 
 ## Usage Examples 
