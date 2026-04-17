@@ -22,4 +22,5 @@ add_executable(otus
 )
 
 target_include_directories(otus PRIVATE ${CMAKE_SOURCE_DIR}/include)
-target_link_libraries(otus PRIVATE ftxui::screen ftxui::dom ftxui::component dl)
+target_link_libraries(otus PRIVATE ftxui::screen ftxui::dom ftxui::component dl) 
+install(TARGETS otus DESTINATION bin)
