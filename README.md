@@ -18,8 +18,9 @@ cd otus
 ```bash
 mkdir build && cd build 
 cmake .. -DCMAKE_BUILD_TYPE=Release
-cmake --build . -j 
-./otus 
+cmake --build . -j
+
+sudo cmake --install . --prefix /usr/local 
 ```
 
 ## Usage Examples 
